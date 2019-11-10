@@ -1,8 +1,5 @@
----
-title: Assigning Tag Based policies with Atlas
----
 
-# Tag Based Policies with Apache Ranger and Apache Atlas
+# Tag Based Policies with Apache Ranger and Apache Atlas from HDP Tutorials
 
 ## Assigning Tag Based Policies with Atlas
 
@@ -176,7 +173,7 @@ to the right of `Policy Name` there is an `enable button` that can be toggled to
 [sandbox-hdp.hortonworks.com:4200](http://sandbox-hdp.hortonworks.com:4200/)
 
 username = `root`
-password = `hadoop`
+password = `onepoint`
 
 >Note: hadoop is the initial password, but you will asked to change it after first sign in.
 
@@ -230,8 +227,7 @@ the Ranger Resource Board policy.
 
 1\. Reset Admin user password:
 
-If you haven't already reset your [Ambari Admin password](https://hortonworks.com/tutorial/learning-the-ropes-of-the-hortonworks-sandbox/#admin-password-reset)
-we will use it to log into Atlas.
+If you haven't already reset your Ambari Admin password we will use it to log into Atlas.
 
 1\. Login into Atlas UI:
 
