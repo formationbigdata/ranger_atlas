@@ -377,6 +377,50 @@ Clear the existing query and select `User` > `raj_ops` in the search bar.
 
 > **NOTE**: There are 2 policies which provided access to raj_ops user, one is a tag based policy and the other is hive resource based policy. The associated tags (PII) is also denoted in the tags column in the audit record).
 
+
+
+
+## Propagate Tag Based Policies
+
+In this section you will see how tag will be propagate to another hive table called `employee2` in the `default` database of our Sandbox.
+
+Keep in mind, for this new table, no policies have been created to authorize what our sandbox users can access within this table and its columns.
+
+1\. Go to **Data Analytics Studio** or **DAS** and click on the **Data Analytics Studio UI** or go to [sandbox-hdp.hortonworks.com:30800](http://sandbox-hdp.hortonworks.com:30800).
+
+2\. Create the `employee2` table:
+
+~~~sql
+create table employee2 as select * from employee;
+~~~
+
+Then, click the green `Execute` button.
+
+You can test it by running the query on all columns in employee2 table on beeline with raj_ops user.
+
+Type the following command in beeline and paste the JDBC URL in between the quotes.
+
+~~~bash
+!q
+beeline -u "Paste the JDBC URL here" -n raj_ops
+~~~
+
+![beeline-rajops-user](assets/images/beeline-rajops-user.jpg)
+
+~~~sql
+select * from employee2;
+~~~
+
+![rajops-hasnot-access-to-employee2](assets/images/beeline-rajops-employees2-access-denied.jpg)
+
+but if we try to select only ssn column :
+
+![rajops-has-access-to-employee2-ssn](assets/images/beeline-rajops-employees2-access-ssn.jpg)
+
+it works also with location column: 
+
+![rajops-has-access-to-employee2-location](assets/images/beeline-rajops-employees2-access-location.jpg)
+
 ## Summary
 
 Ranger traditionally provided group or user based authorization for resources such as table, column in Hive or a file in HDFS.
