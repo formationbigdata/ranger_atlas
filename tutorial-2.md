@@ -225,15 +225,12 @@ with a **PII*** tag. So later when we create a Ranger Tag Based Policy, users
 who are associated with the **PII** tag can override permissions established in
 the Ranger Resource Board policy.
 
-1\. Reset Admin user password:
-
-If you haven't already reset your Ambari Admin password we will use it to log into Atlas.
 
 1\. Login into Atlas UI:
 
 [sandbox-hdp.hortonworks.com:21000](http://sandbox-hdp.hortonworks.com:21000/)
 
-username & password : **admin/admin123**
+username & password : **admin/hortonworks1
 
 ![atlas_login](assets/images/atlas-login.jpg)
 
