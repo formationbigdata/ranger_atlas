@@ -13,12 +13,10 @@ In this section of the tutorial you will begin assigning policies to the users o
 ## Prerequisites
 
 - Downloaded and deployed the [Hortonworks Data Platform (HDP)](https://www.cloudera.com/downloads/hortonworks-sandbox/hdp.html?utm_source=mktg-tutorial) Sandbox
-- [Learning the Ropes of the HDP Sandbox](https://hortonworks.com/tutorial/learning-the-ropes-of-the-hortonworks-sandbox/)
 
 ## Outline
 
 - [Concepts](#concepts)
-- [Sandbox User Personas Policy](#sandbox-user-personas-policy)
 - [Access Without Tag Based Policies](#access-without-tag-based-policies)
 - [Create a Ranger Policy to Limit Access of Hive Data](#create-a-ranger-policy-to-limit-access-of-hive-data)
 - [Create Atlas Tag to Classify Data](#create-atlas-tag-to-classify-data)
@@ -118,11 +116,11 @@ The Ranger UI homepage should look similar to the image below:
 ![ranger-homepage-admin](assets/images/ranger-homepage-admin.jpg)
 
 
-4\. Now select **Add New Policy**:
+2\. Now select **Add New Policy**:
 
 ![new-sandbox-hive-policies](assets/images/new-sandbox-hive-policies.jpg)
 
-5\. In the **Policy Details** field, enter following values:
+3\. In the **Policy Details** field, enter following values:
 
 ~~~text
 Policy Name - Policy to Restrict Employee Data
@@ -132,7 +130,7 @@ Hive Column - ssn, location (NOTE : Do NOT forget to EXCLUDE these columns)
 Description - Any description
 ~~~
 
-6\. In the **Allow Conditions**, it should have the following values:
+4\. In the **Allow Conditions**, it should have the following values:
 
 ~~~text
 Select Group – blank, no input
@@ -146,11 +144,11 @@ You should have your policy configured like this, then click on `Add`.
 
 ![policy-restrict](assets/images/policy-restrict.jpg)
 
-7\. You can see the list of policies that are present in `Sandbox_hive`.
+5\. You can see the list of policies that are present in `Sandbox_hive`.
 
 ![employee-policy-added-admin](assets/images/employee-policy-added-admin.jpg)
 
-8\. Disable the `all - global` Policy to take away `raj_ops` and `maria_dev`
+6\. Disable the `all - global` Policy to take away `raj_ops` and `maria_dev`
 access to the employee table's ssn and location column data.
 
 ![hive-global-policy-admin](assets/images/hive-global-policy-admin.jpg)
