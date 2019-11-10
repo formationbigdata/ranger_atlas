@@ -411,15 +411,15 @@ beeline -u "Paste the JDBC URL here" -n raj_ops
 select * from employee2;
 ~~~
 
-![rajops-hasnot-access-to-employee2](assets/images/beeline-rajops-employees2-access-denied.jpg)
+![rajops-hasnot-access-to-employee2](assets/images/beeline-rajops-employees2-access-denied.JPG)
 
 but if we try to select only ssn column :
 
-![rajops-has-access-to-employee2-ssn](assets/images/beeline-rajops-employees2-access-ssn.jpg)
+![rajops-has-access-to-employee2-ssn](assets/images/beeline-rajops-employees2-access-ssn.JPG)
 
 it works also with location column: 
 
-![rajops-has-access-to-employee2-location](assets/images/beeline-rajops-employees2-access-location.jpg)
+![rajops-has-access-to-employee2-location](assets/images/beeline-rajops-employees2-access-location.JPG)
 
 ## Summary
 
