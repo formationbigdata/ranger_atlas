@@ -396,7 +396,7 @@ create table employee2 as select * from employee;
 
 Then, click the green `Execute` button.
 
-You can test it by running the query on all columns in employee2 table on beeline with raj_ops user.
+Now connect in beeline with **raj_ops** user and try to select all columns from employee2.
 
 Type the following command in beeline and paste the JDBC URL in between the quotes.
 
