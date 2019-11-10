@@ -421,6 +421,11 @@ it works also with location column:
 
 ![rajops-has-access-to-employee2-location](assets/images/beeline-rajops-employees2-access-location.JPG)
 
+
+You can go to ATLAS => Schema UI in SEARCH TAB to see that ssn and location from employee2 table have PII tag also. 
+
+Now you see TAGS can be propagated. 
+
 ## Summary
 
 Ranger traditionally provided group or user based authorization for resources such as table, column in Hive or a file in HDFS.
